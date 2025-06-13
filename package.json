@@ -1,0 +1,13 @@
+{
+  "name": "fynn's blog",
+  "type": "module",
+  "devDependencies": {
+    "vitepress": "^1.6.3",
+    "vitepress-theme-teek": "^1.3.5"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  }
+}
