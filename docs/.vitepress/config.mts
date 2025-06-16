@@ -8,9 +8,6 @@ const teekConfig = defineTeekConfig({
   wallpaper: {
     enabled: true,
   },
-  footerInfo: {
-    customHtml: `<span id="runtime"></span>`, // 需要搭配 .vitepress/theme/helper/useRuntime.ts 使用
-  },
   docAnalysis: {
     createTime: "2025-03-23",
     statistics: {
@@ -32,18 +29,6 @@ const teekConfig = defineTeekConfig({
         link: "https://doc.xugaoyi.com/",
       },
       {
-        name: "One",
-        desc: "明心静性，爱自己",
-        avatar: "https://onedayxyy.cn/img/xyy-touxiang.png",
-        link: "https://onedayxyy.cn/",
-      },
-      {
-        name: "Hyde Blog",
-        desc: "人心中的成见是一座大山",
-        avatar: "https://teek.seasir.top/avatar/avatar.webp",
-        link: "https://teek.seasir.top/",
-      },
-      {
         name: "二丫讲梵",
         desc: "💻学习📝记录🔗分享",
         avatar: "https://wiki.eryajf.net/img/logo.png",
@@ -61,14 +46,9 @@ const teekConfig = defineTeekConfig({
         avatar: "https://avatars.githubusercontent.com/u/90893790?v=4",
         link: "https://vitepress.yiov.top/",
       },
-      {
-        name: "友人A",
-        desc: "おとといは兎をみたの，昨日は鹿，今日はあなた",
-        avatar: "http://niubin.site/logo.jpg",
-        link: "http://niubin.site/",
-      },
     ],
-    autoScroll: true,
+    limit: 5,
+    autoScroll: false,
   },
   social: [
     {
@@ -105,7 +85,7 @@ export default defineConfig({
   extends: teekConfig,
   title: "Fynn's Blog",
   description: "一个分享知识和记录生活的站点",
-   head: [["link", { rel: "icon", href: "/favicon.ico" }]],
+   head: [["link", { rel: "icon", href: "/my-blog/favicon.ico" }]],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: "/favicon.ico",
@@ -113,6 +93,9 @@ export default defineConfig({
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     lastUpdatedText: "上次更新时间",
+    search: {
+      provider: 'local'
+    },
     outline: {
       level: [2, 4],
       label: "本页导航",
@@ -123,8 +106,17 @@ export default defineConfig({
     },
     nav: [
       { text: '首页', link: '/' },
-      { text: '前端', link: '/html/test/' },
-      { text: '开发', link: '/design-pattern/thought/' }
+      { text: '前端', items:[
+        { text: 'html', link: '/html/test/' },
+        { text: 'js', link: '/typescript/introduce/' },
+        { text: '框架', link: '/react/basics/' }]
+      },
+      { text: '开发', items:[
+        { text: '设计模式', link: '/design-pattern/thought/' },
+        { text: '算法', link: '/algorithm/binary-search/' },
+        { text: '知识', link: '/knowledge/object/' }
+      ] },
+      { text: '生活记录', link: '/life/' }
     ],
 
     sidebar: [],
