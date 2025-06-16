@@ -101,6 +101,7 @@ const teekConfig = defineTeekConfig({
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/my-blog',
   extends: teekConfig,
   title: "Fynn's Blog",
   description: "一个分享知识和记录生活的站点",
