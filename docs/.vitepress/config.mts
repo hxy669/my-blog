@@ -109,6 +109,7 @@ export default defineConfig({
       { text: '前端', items:[
         { text: 'html', link: '/html/test/' },
         { text: 'js', link: '/typescript/introduce/' },
+        { text: 'css', link: '/css/液态玻璃/' },
         { text: '框架', link: '/react/basics/' }]
       },
       { text: '开发', items:[
